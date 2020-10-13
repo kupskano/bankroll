@@ -1,0 +1,56 @@
+<ion-toolbar color="secondary">
+  <ion-buttons slot="secondary">
+    <ion-button  routerLink="/profile">
+      <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+    </ion-button>
+    <ion-button>
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button color="primary">
+      <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>PROFILE</ion-title>
+</ion-toolbar>
+
+
+<ion-content>
+  
+
+  <ion-card>
+    <ion-card-content>
+      <ion-label>这是在编码的构造下</ion-label>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs >
+      <ion-tab-bar slot="bottom" slot="fixed">
+        <ion-tab-button  routerLink="/feed">
+          <ion-icon name="newspaper-outline"></ion-icon>
+          <ion-label>Feed</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/friends">
+          <ion-icon name="people-circle-outline"></ion-icon>
+          <ion-label>Request</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/videos">
+          <ion-icon name="videocam-outline"></ion-icon>
+          <ion-label>Videos</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/profile">
+          <ion-icon name="settings-outline"></ion-icon>
+          <ion-label>Settings</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

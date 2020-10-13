@@ -1,0 +1,157 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="secondary">
+      <ion-button  routerLink="/profile">
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="primary">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>SPORTS FEED</ion-title>
+  </ion-toolbar>
+  <!-- <ion-toolbar>
+    <ion-item lines="none">
+     
+      <ion-buttons slot="end">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+      </ion-buttons>
+      <ion-avatar slot="start">
+        <img src="assets/resources/avatar.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h2></h2>
+        <p>SOCIAL MEDIA</p>
+      </ion-label>
+  
+      
+    </ion-item>
+  </ion-toolbar> -->
+</ion-header>
+
+
+  
+
+<ion-content color="secondary">
+    <!-- Data to display after skeleton screen -->
+<div *ngIf="articles">
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Welcome to BANKROLL SPORTS FEED</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Enjoy the article on sports. 
+      </p>
+      <ion-spinner *ngIf="!articles"  name="dots"></ion-spinner>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card *ngFor="let article of articles">
+    <ion-img src="{{article.urlToImage}}"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>{{article.title}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        {{article.description}}
+      </p>
+      <p>Source: {{article.author}}</p>
+      <div class="ion-text-center"> 
+      <ion-button ion-button fill="outline" href="{{article.url}}" large>READ FULL ARTICLE</ion-button>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+
+  
+</div>
+
+<!-- Skeleton screen -->
+<div *ngIf="!articles">
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-skeleton-text animated style="width: 27px; height: 27px" slot="start"></ion-skeleton-text>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs >
+      <ion-tab-bar slot="bottom" slot="fixed">
+        <ion-tab-button  routerLink="/feed">
+          <ion-icon name="newspaper-outline"></ion-icon>
+          <ion-label>Feed</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/friends">
+          <ion-icon name="people-circle-outline"></ion-icon>
+          <ion-label>Request</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/videos">
+          <ion-icon name="videocam-outline"></ion-icon>
+          <ion-label>Videos</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/profile">
+          <ion-icon name="settings-outline"></ion-icon>
+          <ion-label>Settings</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
+

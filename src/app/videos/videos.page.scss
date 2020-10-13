@@ -1,0 +1,42 @@
+/* Custom Skeleton Line Height and Margin */
+.custom-skeleton ion-skeleton-text {
+    line-height: 13px;
+  }
+  
+  .custom-skeleton ion-skeleton-text:last-child {
+    margin-bottom: 5px;
+  }
+
+  .card {
+    margin: 0;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 14px;
+  }
+  
+
+  ion-card-content {
+    .img-wrapper {
+      border-radius: 14px;
+      height: 200px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+  
+    ion-icon {
+      color: #f2994a;
+      padding-right: 4px;
+    }
+  
+    ion-card-subtitle:last-of-type {
+      padding-top:6px;
+    }
+  
+  }
+  .wrapper {
+    padding-bottom: 0;
+  }
+  .title {
+    font-size: 16px;
+    text-align: center;
+}
